@@ -15,17 +15,31 @@
 
     <body>
 
+        <div class="d-none hidden-menu-wrapper" id="hiddenMenu">
+            <button class="btn" id="closenavbarMenus">
+                <img src="assets/icons/reject.png" alt="close" class="img-fluid">
+            </button>
+            <div class="hidden-menu container-fluid">
+                <ul class="navbar-nav navbar-menus">
+                    <li class="nav-item"><a href="#" class="navs nav-link text-light">Home</a></li>
+                    <li class="nav-item"><a href="#" class="navs nav-link text-light">About</a></li>
+                    <li class="nav-item"><a href="#" class="navs nav-link text-light">Projects</a></li>
+                    <li class="nav-item"><a href="#" class="navs nav-link text-light">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
         <!-- navbar section -->
         <div class="landing-page-wrapper mb-5 vh-100" id="landingPageWrapper">
             <div class="landing-page-container container-fluid" id="landingPageContainer">
                 <nav class="navbar navbar-expand-lg mb-5 rounded-5 p-3" id="navbar">
                     <div class="menu-and-logo w-100 d-flex justify-content-between align-items-center" id="menuAndLogo">
                         <img src="assets/images/mp_no_bg.png" alt="logo" class="img-fluid my-logo" width="100">
-                        <button class="btn d-lg-none">
-                            <img src="assets/icons/menu.svg" alt="" class="img-fluid">
+                        <button class="btn d-lg-none" type="button" id="burgerBtn">
+                            <img src="assets/icons/burger-bar.png" alt="menu" class="img-fluid">
                         </button>
                     </div>
-                    <ul class="navbar-nav navbar-menus">
+                    <ul class="navbar-nav navbar-menus d-none d-lg-flex">
                         <li class="nav-item"><a href="#" class="nav-link text-light">Home</a></li>
                         <li class="nav-item"><a href="#" class="nav-link text-light">About</a></li>
                         <li class="nav-item"><a href="#" class="nav-link text-light">Projects</a></li>
@@ -37,13 +51,44 @@
                     <div class="main-contents row d-flex align-items-center">
                         <div class="col-sm-12 col-lg-6">
                             <div class="my-image">
-                                <img src="assets/images/me.jpeg" alt="" class="jhoms border img-fluid rounded-circle shadow-lg" width="300px">
+                                <img src="assets/images/me.jpeg" alt="" class="jhoms border border-info img-fluid rounded-circle shadow-lg" width="300px">
                             </div>
                         </div>
-                        <div class="col-sm-12 col-lg-6">
-                            <h1 class="greetings text-light text-center display-4">Hi, I'm <strong>Jhomell Jaspio</strong></h1>
-                            <p class="text-center text-light fs-3">System Developer</p>
-                            <div class="tech-stacks-icon"></div>
+                        <div class="col-sm-12 col-lg-6 text-center mb-5">
+                            <h1 class="greetings text-center display-4">Hi, I'm <b class="name-colored">Jhomell Jaspio</b></h1>
+                            <p class="job-title text-center text-light fs-3">System Developer</p>
+                            <a href="#" class="my-resume-btn btn rounded-5 p-3 w-25">My Resume</a>
+                        </div>
+                        <div class="col-12 mt-5 overflow-hidden">
+                            <div class="mb-1">
+                                <h1 class="text-center fs-5 text-light">TechStacks:</h1>
+                            </div>
+                            <div class="tech-stacks-wrapper">
+                                <div class="tech-stacks gap-5 d-flex align-items-center">
+                                    <img src="assets/images/Antu_mysql-workbench.svg.png" alt="wb" class="img-fluid" width="70">
+                                    <img src="assets/images/Bootstrap_logo.svg.png" alt="bs" class="img-fluid" width="70">
+                                    <img src="assets/images/ci.png" alt="ci" class="img-fluid" width="70">
+                                    <img src="assets/images/css.png" alt="css" class="img-fluid" width="70">
+                                    <img src="assets/images/HTML5_logo_and_wordmark.svg.png" alt="hmtl" class="img-fluid" width="70">
+                                    <img src="assets/images/JavaScript_logo.svg.png" alt="js" class="img-fluid" width="70">
+                                    <img src="assets/images/JQuery-Logo.svg.png" alt="jq" class="img-fluid" width="70">
+                                    <img src="assets/images/Mysql.svg.png" alt="mysql" class="img-fluid" width="70">
+                                    <img src="assets/images/Navicat_Premium_v12.png" alt="navi" class="img-fluid" width="70">
+                                    <img src="assets/images/PHP-logo.svg.png" alt="php" class="img-fluid" width="70">
+                                </div>
+                                <div class="tech-stacks gap-5 d-flex align-items-center">
+                                    <img src="assets/images/Antu_mysql-workbench.svg.png" alt="wb" class="img-fluid" width="70">
+                                    <img src="assets/images/Bootstrap_logo.svg.png" alt="bs" class="img-fluid" width="70">
+                                    <img src="assets/images/ci.png" alt="ci" class="img-fluid" width="70">
+                                    <img src="assets/images/css.png" alt="css" class="img-fluid" width="70">
+                                    <img src="assets/images/HTML5_logo_and_wordmark.svg.png" alt="hmtl" class="img-fluid" width="70">
+                                    <img src="assets/images/JavaScript_logo.svg.png" alt="js" class="img-fluid" width="70">
+                                    <img src="assets/images/JQuery-Logo.svg.png" alt="jq" class="img-fluid" width="70">
+                                    <img src="assets/images/Mysql.svg.png" alt="mysql" class="img-fluid" width="70">
+                                    <img src="assets/images/Navicat_Premium_v12.png" alt="navi" class="img-fluid" width="70">
+                                    <img src="assets/images/PHP-logo.svg.png" alt="php" class="img-fluid" width="70">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -70,7 +115,28 @@
                 scale: 1.00,
                 scaleMobile: 1.00,
                 color: 0x17179b
-            })
+            });
+
+            // toggle burger btn
+            document.addEventListener("DOMContentLoaded", function () {
+
+                const burgerBtn = document.getElementById("burgerBtn");
+                const hiddenMenu = document.getElementById("hiddenMenu");
+                const closeBtn = document.getElementById("closenavbarMenus");
+
+                // Open / Toggle menu
+                burgerBtn.addEventListener("click", function () {
+                    hiddenMenu.classList.toggle("d-none");
+                });
+
+                // Close menu
+                closeBtn.addEventListener("click", function () {
+                    hiddenMenu.classList.add("d-none");
+                });
+
+                console.log(burgerBtn);
+
+            });
         </script>
 
     </body>

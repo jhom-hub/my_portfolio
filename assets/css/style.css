@@ -19,8 +19,8 @@ body{
 }
 
 .main-content{
-    background: transparent;
-    backdrop-filter: blur(20px);
+    background: transparent !important;
+    backdrop-filter: blur(10px) !important;
 }
 
 @keyframes fade-in-bottom{
@@ -33,6 +33,74 @@ body{
     opacity: 1;
   }
 }
+
+.my-resume-btn{
+    background: #ff922b;
+    color: #f8f9fa;
+    animation:vibrate-1 .5s linear infinite both;
+}
+
+.my-resume-btn:hover{
+    background: transparent;
+    border: 2px, solid, #ff922b;
+    color: #f8f9fa;
+    scale: 1.1;
+}
+
+@keyframes vibrate-1{
+    0%{
+        transform:translate(0)
+    }
+    20%{
+        transform:translate(-2px,2px)
+    }
+    40%{
+        transform:translate(-2px,-2px)
+    }
+    60%{
+        transform:translate(2px,2px)
+    }
+    80%{
+        transform:translate(2px,-2px)
+    }
+    100%{
+        transform:translate(0)
+    }
+}
+
+.tech-stacks-wrapper{
+    display: flex;
+    width: max-content;
+    animation: scroll 30s linear infinite;
+}
+
+.tech-stacks{
+    padding-right: 3rem;
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
+.tech-stacks-wrapper:hover{
+    animation-play-state: paused;
+}
+
+.name-colored{
+    color: #ff922b !important;
+}
+
+.greetings{
+    font-size: 27px;
+    color: #f8f9fa;
+}
+
+/* small breakpoint */
 
 @media(max-width: 580px){
     .navbar-menus{
@@ -53,4 +121,48 @@ body{
         display: flex;
         justify-content: center;
     }
+
+    .greetings{
+        font-size: 27px;
+    }
+
+    .job-title{
+        font-size: 12px;
+    }
+
+    .my-resume-btn{
+        width: 120px !important;
+    }
+
+   /* Ensure this is at the bottom of your style.css, outside any @media blocks */
+    .hidden-menu-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95); /* Darker for better contrast */
+        z-index: 10000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #closenavbarMenus {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        border: none;
+    }
+
+    /* Ensure the links are visible in the flex container */
+    .hidden-menu-wrapper .navbar-menus {
+        display: flex !important;
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
 }
+
+/* small breakpoint end */
