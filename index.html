@@ -15,7 +15,7 @@
 
     <body>
 
-        <div class="d-none hidden-menu-wrapper" id="hiddenMenu">
+        <div class="hidden-menu-wrapper" id="hiddenMenu">
             <button class="btn" id="closenavbarMenus">
                 <img src="assets/icons/reject.png" alt="close" class="img-fluid">
             </button>
@@ -56,7 +56,7 @@
                         </div>
                         <div class="col-sm-12 col-lg-6 text-center mb-5">
                             <h1 class="greetings text-center display-4">Hi, I'm <b class="name-colored">Jhomell Jaspio</b></h1>
-                            <p class="job-title text-center text-light fs-3">System Developer</p>
+                            <p class="job-title text-center text-light fs-3"><span id="typing"></span></p>
                             <a href="#" class="my-resume-btn btn rounded-5 p-3 w-25">My Resume</a>
                         </div>
                         <div class="col-12 mt-5 overflow-hidden">
@@ -126,16 +126,53 @@
 
                 // Open / Toggle menu
                 burgerBtn.addEventListener("click", function () {
-                    hiddenMenu.classList.toggle("d-none");
+                    hiddenMenu.classList.toggle("showMenu");
                 });
 
-                // Close menu
                 closeBtn.addEventListener("click", function () {
-                    hiddenMenu.classList.add("d-none");
+                    hiddenMenu.classList.remove("showMenu");
                 });
 
-                console.log(burgerBtn);
+            });
 
+            document.addEventListener("DOMContentLoaded", function() {
+                const roles = ["System Developer", "Fullstack Developer", "PHP Developer"];
+                let i = 0; // role index
+                let j = 0; // character index
+                let currentText = "";
+                let isDeleting = false;
+                const typingSpeed = 150; // ms per character
+                const deleteSpeed = 80;
+                const delayBetweenWords = 1000; // delay before deleting
+
+                function type() {
+                    const target = document.getElementById("typing");
+
+                    if(!isDeleting) {
+                        currentText = roles[i].substring(0, j + 1);
+                        target.textContent = currentText;
+                        j++;
+
+                        if(j === roles[i].length){
+                            isDeleting = true;
+                            setTimeout(type, delayBetweenWords);
+                            return;
+                        }
+                        setTimeout(type, typingSpeed);
+                    } else {
+                        currentText = roles[i].substring(0, j - 1);
+                        target.textContent = currentText;
+                        j--;
+
+                        if(j === 0){
+                            isDeleting = false;
+                            i = (i + 1) % roles.length;
+                        }
+                        setTimeout(type, deleteSpeed);
+                    }
+                }
+
+                type();
             });
         </script>
 
