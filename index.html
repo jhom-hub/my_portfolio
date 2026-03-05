@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio</title>
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!-- style -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <!-- favicon -->
+        <link rel="shortcut icon" href="assets/images/MP.png" type="image/x-icon">
+    </head>
+
+    <body>
+
+        <!-- navbar section -->
+        <div class="landing-page-wrapper mb-5 vh-100" id="landingPageWrapper">
+            <div class="landing-page-container container-fluid" id="landingPageContainer">
+                <nav class="navbar navbar-expand-lg mb-5 rounded-5 shadow p-3" id="navbar">
+                    <div class="menu-and-logo w-100 d-flex justify-content-between align-items-center" id="menuAndLogo">
+                        <img src="assets/images/mp_no_bg.png" alt="logo" class="img-fluid my-logo" width="100">
+                        <button class="btn d-lg-none">
+                            <img src="assets/icons/menu.svg" alt="" class="img-fluid">
+                        </button>
+                    </div>
+                    <ul class="navbar-nav navbar-menus">
+                        <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- scripts -->
+
+        <!-- bootstrap -->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <!-- vanta -->
+        <script src="assets/js/three.min.js"></script>
+        <script src="assets/js/vanta.net.min.js"></script>
+
+        <script>
+            // animation
+            VANTA.NET({
+                el: "#landingPageWrapper",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                color: 0x17179b
+            })
+        </script>
+
+    </body>
+
+</html>
