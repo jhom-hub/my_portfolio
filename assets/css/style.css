@@ -1,0 +1,312 @@
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu-Regular.ttf');
+}
+
+/* GLOBAL */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    background: #0f0f1a;
+    overflow-x: hidden;
+}
+
+/* LANDING PAGE */
+
+.landing-page-container {
+    animation: fade-in-bottom .6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+/* GLASS NAVBAR */
+
+#navbar {
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: .3s;
+}
+
+/* NAV LINKS */
+
+.nav-link {
+    position: relative;
+    transition: .3s;
+    font-size: 17px;
+}
+
+.nav-link:hover {
+    color: #ff922b !important;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #ff922b;
+    transition: .3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* MAIN CONTENT */
+
+.main-content {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+}
+
+/* PROFILE IMAGE */
+
+.jhoms {
+    border: 4px solid #ff922b;
+    box-shadow: 0 0 30px rgba(255, 146, 43, .6);
+    transition: .4s;
+}
+
+.jhoms:hover {
+    transform: scale(1.05);
+}
+
+/* NAME COLOR */
+
+.name-colored {
+    color: #ff922b;
+}
+
+/* TEXT */
+
+.greetings {
+    font-size: 40px;
+    color: #fff;
+}
+
+.job-title {
+    color: #cfcfcf;
+}
+
+/* RESUME BUTTON */
+
+.my-resume-btn {
+    background: #ff922b;
+    color: #fff;
+    border: none;
+    transition: .3s;
+    box-shadow: 0 5px 15px rgba(255, 146, 43, .4);
+}
+
+.my-resume-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 146, 43, .7);
+    color: #cfcfcf;
+}
+
+/* TECH STACKS */
+
+.tech-stacks-wrapper {
+    display: flex;
+    width: max-content;
+    animation: scroll 25s linear infinite;
+}
+
+.tech-stacks {
+    padding-right: 3rem;
+}
+
+.tech-stacks img {
+    filter: grayscale(100%);
+    transition: .3s;
+}
+
+.tech-stacks img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.15);
+}
+
+.about-info{
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* TECH STACK ANIMATION */
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.tech-stacks-wrapper:hover {
+    animation-play-state: paused;
+}
+
+/* FADE ANIMATION */
+
+@keyframes fade-in-bottom {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* MOBILE MENU */
+
+.hidden-menu-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #1c1330;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    transform: translateY(-100%);
+    transition: .4s ease;
+
+
+}
+
+.hidden-menu-wrapper.showMenu {
+    transform: translateY(0);
+}
+
+.hidden-menu-wrapper .navbar-menus {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+}
+
+.hidden-menu-wrapper .nav-link {
+    font-size: 28px;
+}
+
+/* CLOSE BUTTON */
+
+#closenavbarMenus {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    border: none;
+}
+
+/* LOGO */
+
+.my-logo {
+    transition: .3s;
+}
+
+.my-logo:hover {
+    transform: scale(1.05);
+}
+
+/* IMAGE CENTER */
+
+.my-image {
+    display: flex;
+    justify-content: center;
+}
+
+#typing::after {
+    content: "|";
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
+/* Active nav link styling */
+.navbar-nav .nav-link.active {
+    color: #ff922b !important;        /* Highlight color */
+    font-weight: 600;                  /* Slightly bolder */
+    position: relative;
+}
+
+/* Optional underline for active */
+.navbar-nav .nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: #ff922b;
+    border-radius: 2px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px) {
+
+
+    .greetings {
+        font-size: 30px;
+    }
+
+    .job-title {
+        font-size: 18px;
+    }
+
+    .jhoms {
+        width: 200px;
+    }
+
+    .my-resume-btn {
+        width: 140px !important;
+    }
+
+
+}
+
+@media(max-width:580px) {
+
+
+    .navbar-menus {
+        display: none;
+    }
+
+    #navbar {
+        margin-bottom: 5px !important;
+    }
+
+    .greetings {
+        font-size: 26px;
+    }
+
+    .job-title {
+        font-size: 14px;
+    }
+
+    .jhoms {
+        width: 180px;
+    }
+
+
+}

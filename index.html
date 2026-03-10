@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio</title>
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!-- style -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <!-- favicon -->
+        <link rel="shortcut icon" href="assets/images/MP.png" type="image/x-icon">
+    </head>
+
+    <body>
+
+        <div class="hidden-menu-wrapper" id="hiddenMenu">
+            <button class="btn" id="closenavbarMenus">
+                <img src="assets/icons/reject.png" alt="close" class="img-fluid">
+            </button>
+            <div class="hidden-menu container-fluid">
+                <ul class="navbar-nav navbar-menus">
+                    <li class="nav-item"><a href="#landingPageWrapper" class="navs nav-link text-light active">Home</a></li>
+                    <li class="nav-item"><a href="#aboutWrapper" class="navs nav-link text-light">About</a></li>
+                    <li class="nav-item"><a href="#" class="navs nav-link text-light">Projects</a></li>
+                    <li class="nav-item"><a href="#" class="navs nav-link text-light">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- navbar section -->
+        <div class="landing-page-wrapper mb-5 min-vh-100" id="landingPageWrapper">
+            <div class="landing-page-container container-fluid" id="landingPageContainer">
+                <nav class="navbar navbar-expand-lg mb-5 rounded-5 p-3" id="navbar">
+                    <div class="menu-and-logo w-100 d-flex justify-content-between align-items-center" id="menuAndLogo">
+                        <img src="assets/images/mp_no_bg.png" alt="logo" class="img-fluid my-logo" width="100">
+                        <button class="btn d-lg-none" type="button" id="burgerBtn">
+                            <img src="assets/icons/burger-bar.png" alt="menu" class="img-fluid">
+                        </button>
+                    </div>
+                    <ul class="navbar-nav navbar-menus d-none d-lg-flex">
+                        <li class="nav-item"><a href="#landingPageWrapper" class="nav-link text-light active">Home</a></li>
+                        <li class="nav-item"><a href="#aboutWrapper" class="nav-link text-light">About</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-light">Projects</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-light">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="main-content container p-5">
+                    <div class="main-contents row d-flex align-items-center">
+                        <div class="col-sm-12 col-lg-6">
+                            <div class="my-image">
+                                <img src="assets/images/me.jpeg" alt="" class="jhoms border border-info img-fluid rounded-circle shadow-lg" width="300px">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-6 text-center mb-5">
+                            <h1 class="greetings text-center display-4">Hi, I'm <b class="name-colored">Jhomell Jaspio</b></h1>
+                            <p class="job-title text-center text-light fs-3"><span id="typing"></span></p>
+                            <a href="#" class="my-resume-btn btn rounded-5 p-3 w-25">My Resume</a>
+                        </div>
+                        <div class="col-12 mt-5 overflow-hidden">
+                            <div class="mb-1">
+                                <h1 class="text-center fs-5 text-light">TechStacks:</h1>
+                            </div>
+                            <div class="tech-stacks-wrapper">
+                                <div class="tech-stacks gap-5 d-flex align-items-center">
+                                    <img src="assets/images/Antu_mysql-workbench.svg.png" alt="wb" class="img-fluid" width="70">
+                                    <img src="assets/images/Bootstrap_logo.svg.png" alt="bs" class="img-fluid" width="70">
+                                    <img src="assets/images/ci.png" alt="ci" class="img-fluid" width="70">
+                                    <img src="assets/images/css.png" alt="css" class="img-fluid" width="70">
+                                    <img src="assets/images/HTML5_logo_and_wordmark.svg.png" alt="hmtl" class="img-fluid" width="70">
+                                    <img src="assets/images/JavaScript_logo.svg.png" alt="js" class="img-fluid" width="70">
+                                    <img src="assets/images/JQuery-Logo.svg.png" alt="jq" class="img-fluid" width="70">
+                                    <img src="assets/images/Mysql.svg.png" alt="mysql" class="img-fluid" width="70">
+                                    <img src="assets/images/Navicat_Premium_v12.png" alt="navi" class="img-fluid" width="70">
+                                    <img src="assets/images/PHP-logo.svg.png" alt="php" class="img-fluid" width="70">
+                                </div>
+                                <div class="tech-stacks gap-5 d-flex align-items-center">
+                                    <img src="assets/images/Antu_mysql-workbench.svg.png" alt="wb" class="img-fluid" width="70">
+                                    <img src="assets/images/Bootstrap_logo.svg.png" alt="bs" class="img-fluid" width="70">
+                                    <img src="assets/images/ci.png" alt="ci" class="img-fluid" width="70">
+                                    <img src="assets/images/css.png" alt="css" class="img-fluid" width="70">
+                                    <img src="assets/images/HTML5_logo_and_wordmark.svg.png" alt="hmtl" class="img-fluid" width="70">
+                                    <img src="assets/images/JavaScript_logo.svg.png" alt="js" class="img-fluid" width="70">
+                                    <img src="assets/images/JQuery-Logo.svg.png" alt="jq" class="img-fluid" width="70">
+                                    <img src="assets/images/Mysql.svg.png" alt="mysql" class="img-fluid" width="70">
+                                    <img src="assets/images/Navicat_Premium_v12.png" alt="navi" class="img-fluid" width="70">
+                                    <img src="assets/images/PHP-logo.svg.png" alt="php" class="img-fluid" width="70">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- about section -->
+        <div class="mb-5 mt-5 about-wrapper" id="aboutWrapper">
+            <div class="about-container container p-5">
+
+                <div class="text-center mb-5">
+                    <h1 class="text-light fw-bold">About Me</h1>
+                    <p class="text-secondary">Get to know more about me and my skills</p>
+                </div>
+
+                <div class="row align-items-center">
+
+                    <!-- about text -->
+                    <div class="col-lg-7 col-md-12 mb-4">
+                        <div class="about-content text-lg-start text-center">
+                            <p class="h4 text-light">
+                                I am a passionate <u>Web Developer</u> who enjoys building modern and efficient web applications. 
+                                My development stack includes <b>HTML, CSS, Bootstrap, JavaScript, PHP, jQuery, CodeIgniter v3/v4, MySQL, Navicat, and MySQL Workbench</b>, 
+                                which I use to create responsive, functional, and user-focused digital solutions.
+                            </p>
+
+                            <span class="text-secondary">
+                                I focus on writing clean, maintainable code and continuously expanding my knowledge in web technologies. 
+                                My goal is to develop reliable systems and meaningful projects that deliver real value to users.
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- quick info -->
+                    <div class="col-lg-5 col-md-12">
+                        <div class="about-info p-4 rounded-4 shadow-lg text-light">
+
+                            <div class="mb-3">
+                                <b>Name:</b> Jhomell Jaspio
+                            </div>
+
+                            <div class="mb-3">
+                                <b>Role:</b> Web Developer
+                            </div>
+
+                            <div class="mb-3">
+                                <b>Focus:</b> Full Stack Development
+                            </div>
+
+                            <div class="mb-3">
+                                <b>Tech Stack:</b> PHP • JavaScript • MySQL
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- projects section -->
+
+        <!-- scripts -->
+
+        <!-- bootstrap -->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <!-- vanta -->
+        <script src="assets/js/three.min.js"></script>
+        <script src="assets/js/vanta.net.min.js"></script>
+
+        <script>
+            // animation
+            VANTA.NET({
+                el: "#landingPageWrapper",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                color: 0x17179b
+            });
+
+            // toggle burger btn
+            document.addEventListener("DOMContentLoaded", function () {
+
+                const burgerBtn = document.getElementById("burgerBtn");
+                const hiddenMenu = document.getElementById("hiddenMenu");
+                const closeBtn = document.getElementById("closenavbarMenus");
+
+                // Open / Toggle menu
+                burgerBtn.addEventListener("click", function () {
+                    hiddenMenu.classList.toggle("showMenu");
+                });
+
+                closeBtn.addEventListener("click", function () {
+                    hiddenMenu.classList.remove("showMenu");
+                });
+
+            });
+
+            document.addEventListener("DOMContentLoaded", function() {
+                const roles = ["System Developer", "Fullstack Developer", "PHP Developer"];
+                let i = 0; // role index
+                let j = 0; // character index
+                let currentText = "";
+                let isDeleting = false;
+                const typingSpeed = 150; // ms per character
+                const deleteSpeed = 80;
+                const delayBetweenWords = 1000; // delay before deleting
+
+                function type() {
+                    const target = document.getElementById("typing");
+
+                    if(!isDeleting) {
+                        currentText = roles[i].substring(0, j + 1);
+                        target.textContent = currentText;
+                        j++;
+
+                        if(j === roles[i].length){
+                            isDeleting = true;
+                            setTimeout(type, delayBetweenWords);
+                            return;
+                        }
+                        setTimeout(type, typingSpeed);
+                    } else {
+                        currentText = roles[i].substring(0, j - 1);
+                        target.textContent = currentText;
+                        j--;
+
+                        if(j === 0){
+                            isDeleting = false;
+                            i = (i + 1) % roles.length;
+                        }
+                        setTimeout(type, deleteSpeed);
+                    }
+                }
+
+                type();
+            });
+        </script>
+
+    </body>
+
+</html>
